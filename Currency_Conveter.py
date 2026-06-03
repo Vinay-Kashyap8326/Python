@@ -19,20 +19,19 @@ price_list = {
 language(lan_List)
 print("\nQ- Which currency do you want to convert?\n")
 input1 = int(input("Please Enter Serial Number: "))
-option1 = lan_List[input1-1]
 print()
 language(lan_List)
 print("\nQ- What currency do you want to convert to?\n")
 input2 = int(input("Please Enter Serial Number: "))
 print()
-option2 = lan_List[input2-1]
 print("You want to convert-\n")
-print(option1,"=>",option2)
+print(lan_List[input1-1],"=>",lan_List[input2-1])
 confirmation=input("\nYES OR NO (Y/N): ")
-if(confirmation=="Y"):
+if(confirmation=="Y" or confirmation=="y"):
   amount=int(input("\nEnter Amount: "))
-  
-elif(confirmation=="N"):
+  print("\n1",lan_List[input1-1],"=>",price_list[lan_List[input1-1]][input2-1],lan_List[input2-1])
+  print("\n",amount,lan_List[input1-1],"=>",amount*(price_list[lan_List[input1-1]][input2-1]),lan_List[input2-1])
+elif(confirmation=="N" or confirmation=="n"):
   print("\nEXIT...")
 else:
   print("Invalid Option")
