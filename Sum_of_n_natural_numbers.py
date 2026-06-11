@@ -3,4 +3,4 @@ def sum(n):
     return 0
   Totalsum = n+(sum(n-1))
   return Totalsum
-print(sum(6))
+print("Sum Is:",sum(6))
